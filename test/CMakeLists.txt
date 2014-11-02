@@ -1,0 +1,16 @@
+if(WIN32)
+  string(REPLACE "/" "\\\\" CMAKE_CURRENT_BINARY_DIR_NATIVE ${CMAKE_CURRENT_BINARY_DIR})
+  string(REPLACE "/" "\\\\" CMAKE_RUNTIME_OUTPUT_DIRECTORY_NATIVE ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+else()
+  set(CMAKE_CURRENT_BINARY_DIR_NATIVE ${CMAKE_CURRENT_BINARY_DIR})
+  set(CMAKE_RUNTIME_OUTPUT_DIRECTORY_NATIVE ${CMAKE_RUNTIME_OUTPUT_DIRECTORY})
+endif()
+
+configure_file(${CMAKE_CURRENT_SOURCE_DIR}/usServiceEventListenerTestConfig.h.in
+               ${CMAKE_CURRENT_BINARY_DIR}/usServiceEventListenerTestConfig.h)
+
+# add custom target so that the test executable is rebuilt when the config header is regenerated
+add_custom_target(usServiceEventListenerTestConfigTarget DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/usServiceEventListenerTestConfig.h)
+add_dependencies(${BII_test_main_TARGET} usServiceEventListenerTestConfigTarget)
+
+target_include_directories(${BII_test_main_TARGET} PUBLIC ${CMAKE_CURRENT_BINARY_DIR})

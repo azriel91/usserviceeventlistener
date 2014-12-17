@@ -41,7 +41,7 @@ TEST(UsServiceEventListenerBundle, CanBeLoaded) {
 		BundleLoader bundleLoader;
 		bundleLoader.load(LIB_PATH + LIB_NAME);
 
-		EXPECT_TRUE(ModuleRegistry::GetModule("US Service Event Listener") != NULL);
+		EXPECT_TRUE(ModuleRegistry::GetModule("usServiceEventListener") != NULL);
 	} catch (const std::exception& e) {
 		FAIL() << e.what();
 	}

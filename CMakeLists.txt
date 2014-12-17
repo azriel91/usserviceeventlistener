@@ -16,8 +16,12 @@ set(BII_LIB_TYPE SHARED)
 set(BII_LIB_SRC ServiceEventListenerActivator.cpp)
 set(BII_LIB_DEPS azriel_cppmicroservices)
 
+usFunctionGenerateModuleInit(BII_LIB_SRC MODULE_NAME usServiceEventListener)
+
 # Actually create targets: EXEcutables and libraries.
 ADD_BIICODE_TARGETS()
+
+set_property(TARGET azriel_usserviceeventlistener APPEND PROPERTY COMPILE_DEFINITIONS US_MODULE_NAME=usServiceEventListener)
 
 # link libraries for the CppMicroServices lib
 set(US_LINK_LIBRARIES )

@@ -22,7 +22,6 @@
 //! [Activator]
 #include <usModuleActivator.h>
 #include <usModuleContext.h>
-#include <usModuleInitialization.h>
 
 US_USE_NAMESPACE
 
@@ -85,7 +84,6 @@ private:
 } /* namespace service */
 } /* namespace us */
 
-US_EXPORT_MODULE_ACTIVATOR(usserviceeventlistener, us::service::event::ServiceEventListenerActivator)
+US_EXPORT_MODULE_ACTIVATOR(us::service::event::ServiceEventListenerActivator)
 
-US_INITIALIZE_MODULE("US Service Event Listener", "usserviceeventlistener")
 //! [Activator]

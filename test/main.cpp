@@ -23,8 +23,14 @@
 
 #include <google/gtest/gtest.h>
 
-#include <usModuleRegistry.h>
-#include <azriel/usbundleloader/BundleLoader.h>
+#include "azriel/cppmicroservices/core/include/usModuleRegistry.h"
+#include "../ServiceEventListenerActivator.h"
+
+#ifdef US_BUILD_SHARED_LIBS
+#include "azriel/usbundleloader/BundleLoader.h"
+#else
+#include "azriel/cppmicroservices/core/include/usModuleImport.h"
+#endif
 
 #include "usServiceEventListenerTestConfig.h"
 
@@ -36,10 +42,17 @@ US_USE_NAMESPACE
 	static const std::string LIB_PATH = US_LIBRARY_OUTPUT_DIRECTORY;
 #endif
 
+#ifndef US_BUILD_SHARED_LIBS
+US_IMPORT_MODULE(CppMicroServices)
+US_IMPORT_MODULE(usServiceEventListener)
+#endif
+
 TEST(UsServiceEventListenerBundle, CanBeLoaded) {
 	try {
+#ifdef US_BUILD_SHARED_LIBS
 		BundleLoader bundleLoader;
 		bundleLoader.load(LIB_PATH + LIB_NAME);
+#endif
 
 		EXPECT_TRUE(ModuleRegistry::GetModule("usServiceEventListener") != NULL);
 	} catch (const std::exception& e) {

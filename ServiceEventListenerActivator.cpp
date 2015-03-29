@@ -20,8 +20,8 @@
 =============================================================================*/
 
 //! [Activator]
-#include <usModuleActivator.h>
-#include <usModuleContext.h>
+#include "azriel/cppmicroservices/core/include/usModuleActivator.h"
+#include "azriel/cppmicroservices/core/include/usModuleContext.h"
 
 US_USE_NAMESPACE
 

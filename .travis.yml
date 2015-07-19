@@ -81,6 +81,6 @@ env:
   - BLOCK_NAME=usserviceeventlistener
   - USER=azriel
   # BII_PASSWORD
-  - secure: Z8AqJigIfgZxKGC4ObIhvTi6rhr1SdLA0FAjkIaP09RQABkakzvA8X2bENdPUFs+LkkWW45OD571QKmYMs6coR1NbBwMCCV9D3inRO22Y4vWhJS6txZtdfaLcjIxhBHL+qRSdUyra6tvpzPGIbme2Z8e1vyEQuzqy91N51wKjV8=
+  - secure: "Q+mPfWqrX8ULpiovLjTlsDlUl8GmBwMDDO1vFXUSTnpirVbIP5v/eDBbVW8u7SombPwvaX+Wipaz45yt5uFq+0vI4AfQYGHZHHcjZzTJgtSJI8jgWpIaxhpzQAfIHL6EeNuVPIqTLuJBEKqnME5u+P/7bgIg9kiq5o7GAMioKGo="
   # GITHUB_TOKEN
   - secure: "g/5tIVCJNQw+dtPRyckMMHh88w5kkKY1+k62TlQ/ERdy2G4J3vAnW3B7bGpfzklqGV/72YQekiZxHvpLTUA4vixO+MPvDBK9igSYqZLflRKrQxH0X6T/P8fifYeCv5kr5VeDwnxQ4nr0054mehkHLuJkE7faDpxdXlsDMtlKpO4="

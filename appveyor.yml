@@ -21,10 +21,10 @@ build_script:
 - cmd: bii build
 
 test_script:
-- cmd: bin/azriel_usserviceeventlistener_test_main.exe
+- cmd: bin\%USER%_%BLOCK_NAME%_test_main.exe
 
 environment:
-  BLOCK_NAME: sl_core_application
+  BLOCK_NAME: usserviceeventlistener
   USER: azriel
 
   matrix:

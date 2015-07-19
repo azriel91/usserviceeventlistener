@@ -83,4 +83,4 @@ env:
   # BII_PASSWORD
   - secure: Z8AqJigIfgZxKGC4ObIhvTi6rhr1SdLA0FAjkIaP09RQABkakzvA8X2bENdPUFs+LkkWW45OD571QKmYMs6coR1NbBwMCCV9D3inRO22Y4vWhJS6txZtdfaLcjIxhBHL+qRSdUyra6tvpzPGIbme2Z8e1vyEQuzqy91N51wKjV8=
   # GITHUB_TOKEN
-  - secure: frR/+26mnj9huz8aEY+Z8djcoEyi0a+0u5QylGOagY9wvk64WGyRMykoPCHADa4nBA5ymNt+xBmcFCZkNY/TBPWGaB23aIbGoXWDE0tvqAnToTcm+rWlLdfj3akLhmZBRc8rGm+QJbuoVw/KCfbxR5xzlz0UuDCA2CY3dy4UwkI=
+  - secure: "g/5tIVCJNQw+dtPRyckMMHh88w5kkKY1+k62TlQ/ERdy2G4J3vAnW3B7bGpfzklqGV/72YQekiZxHvpLTUA4vixO+MPvDBK9igSYqZLflRKrQxH0X6T/P8fifYeCv5kr5VeDwnxQ4nr0054mehkHLuJkE7faDpxdXlsDMtlKpO4="
